@@ -860,6 +860,11 @@
             "default": "",
             "fa_icon": "fas fa-bacteria",
             "properties": {
+                "qiime_mafft_parttree": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Enable MAFFT's PartTree algorithm when aligning representative sequences for the QIIME 2 phylogenetic tree."
+                },
                 "metadata_category": {
                     "type": "string",
                     "description": "Comma separated list of metadata column headers for statistics.",

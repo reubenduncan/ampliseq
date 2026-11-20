@@ -22,7 +22,7 @@ process QIIME2_TREE {
     qiime alignment mafft \\
         --i-sequences ${repseq} \\
         --o-alignment aligned-rep-seqs.qza \\
-        --p-n-threads ${task.cpus}
+        --p-n-threads ${task.cpus} ${params.qiime_mafft_parttree ? '--p-parttree' : ''}
     qiime alignment mask \\
         --i-alignment aligned-rep-seqs.qza \\
         --o-masked-alignment masked-aligned-rep-seqs.qza
